@@ -1,6 +1,10 @@
 * {
 	margin: 0;
 	padding: 0;
+	--primary-color: #264653;
+	--secondary-color: #2A9D8F;
+	--accent1-color: #E9C46A;
+	--accent2-color: #F4A261;
 }
 
 main {
