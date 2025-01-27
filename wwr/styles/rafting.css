@@ -1,0 +1,76 @@
+:root {
+	--primary-color: #264653;
+	--secondary-color: #2A9D8F;
+	--accent1-color: #E9C46A;
+	--accent2-color: #F4A261;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", serif;
+    color: var(--accent1-color);
+    font-size: 2rem;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.hero {
+    position: relative;
+
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-shadow: 3px 3px 5px #777;
+}
+
+.hero article {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin: 4rem;
+}
+
+.hero article p {
+    color: white;
+    text-shadow: 3px 3px 5px #777;
+}
+
+.hero article img {
+
+    width: 300px;
+    height: 200px;
+    right: 0%;
+
+}
