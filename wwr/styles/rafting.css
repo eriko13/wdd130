@@ -341,3 +341,36 @@ p {
     line-height: 1.6;
     margin-bottom: 1rem;
 }
+
+/* Add these new styles for radio buttons */
+.form-item div {
+    margin-bottom: 0.5rem;
+}
+
+.form-item input[type="radio"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.form-item input[type="radio"] + label {
+    display: inline;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.form-item input[type="radio"]:checked + label {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Update the existing checkbox styles */
+.form-item input[type="checkbox"] + label {
+    display: inline;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.form-item input[type="checkbox"]:checked + label {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
