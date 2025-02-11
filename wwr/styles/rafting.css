@@ -32,7 +32,11 @@ p {
 
 .hero {
     position: relative;
-
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .hero img {
@@ -42,17 +46,24 @@ p {
 }
 
 .hero h1 {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     color: white;
-    font-size: 2rem;
-    text-shadow: 3px 3px 5px #777;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+    transform: none;
+    top: auto;
+    left: auto;
 }
 
 .hero article {
-    background-color: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
     padding: 1rem;
     position: absolute;
     top: 40%;
@@ -68,81 +79,72 @@ p {
 }
 
 .hero article img {
-
     width: 300px;
     height: 200px;
     right: 0%;
-
 }
 
 header {
-	margin: 1rem 2rem;
-	display: grid;
-	grid-template-columns: 320px 1fr 1fr;
-	align-items: center;
-
-	border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 320px 1fr 1fr;
+    align-items: center;
 }
 
 header img {
-	height: auto;
+    height: 80px;
+    width: auto;
 }
 
-h1 {
-	font-size: 2rem;
-	font-family: Acme, Arial, sans-serif;
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 2rem;
 }
 
 .navigation {
-	display: flex;
-    flex-direction: row;
+    display: flex;
     justify-content: flex-end;
-	flex-wrap: wrap;
-	list-style: none;
-	padding: 0;
-	font-family: Arial, sans-serif;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
 }
 
 .navigation li {
-	flex: 1 1 auto;
+    margin: 0;
 }
 
 .navigation a {
-	display: block;
-	color: navy;
-	padding: 20px;
-	text-decoration: none;
-	font-size: 1.2rem;
+    display: block;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .navigation a:hover {
-	color: tomato;
-	font-weight: 700;
-	text-decoration: underline;
+    color: var(--accent1-color);
+    transform: translateY(-2px);
 }
 
-.history-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 5rem;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+.history-section, .adventures-section {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.history-section:nth-child(even), 
+.adventures-section:nth-child(even) {
+    background-color: white;
 }
 
 .history-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-}
-
-.adventures-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 5rem;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
 }
 
 .adventures-content {
@@ -157,11 +159,15 @@ h1 {
 }
 
 figure {
-    border: thin #c0c0c0 solid;
-    display: flex;
-    flex-flow: column;
-    padding: 5px;
-    margin: auto;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
 }
 
 figcaption {
@@ -173,12 +179,13 @@ figcaption {
 }
 
 footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
     width: 100%;
 }
 
@@ -192,4 +199,145 @@ footer p {
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
+}
+
+.social a {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social a:hover {
+    opacity: 1;
+}
+
+/* Contact Page Styles */
+.contact-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.map-section, .team-section, .form-section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.employee-profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.employee-profiles figure {
+    margin: 0;
+    text-align: center;
+}
+
+.employee-profiles img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.employee-profiles figcaption {
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form fieldset {
+    border: 1px solid var(--accent1-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+}
+
+.form-item {
+    margin-bottom: 1rem;
+}
+
+.form-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item select,
+.form-item textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent1-color);
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
