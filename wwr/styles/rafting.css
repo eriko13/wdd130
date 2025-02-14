@@ -50,13 +50,17 @@ p {
 
 .hero h1 {
     position: relative;
-    color: white;
+    color: #ffffff;
     font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
     margin-bottom: 2rem;
     transform: none;
     top: auto;
     left: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
 }
 
 .hero article {
