@@ -484,3 +484,136 @@ p {
         margin-bottom: 1rem;
     }
 }
+
+/* Trips Page Styles */
+.trip-highlights {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.trip-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.trip-content {
+    padding: 1.5rem;
+}
+
+.trip-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.trip-content p {
+    margin-bottom: 1.5rem;
+}
+
+.trip-details {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.trip-details li {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.trip-table-section {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.trip-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.trip-table th,
+.trip-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.trip-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.trip-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.trip-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.contact-cta {
+    background-color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.contact-cta h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact-cta p {
+    color: white;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trip-table {
+        font-size: 0.9rem;
+    }
+    
+    .trip-table th,
+    .trip-table td {
+        padding: 0.75rem;
+    }
+}
